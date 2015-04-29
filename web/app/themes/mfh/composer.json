@@ -1,0 +1,121 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "A modern WordPress stack",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "wordpress", "stack", "capistrano", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "config": {
+    "preferred-install": "dist",
+    "generate-salts": true
+  },
+  "autoload": {
+    "psr-0": {"Roots\\Bedrock\\Installer": "scripts"}
+  },
+  "scripts": {
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "http://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "matthewkeath/gravity-platformb",
+        "version": "1.9.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/matthewkeath/gravity-platformb/archive/master.zip"
+        }
+
+      }
+    },
+
+{
+      "type": "package",
+      "package": {
+        "name": "katzwebservices/GravityView",
+        "version": "1.7.4.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/katzwebservices/GravityView/archive/master.zip"
+        }
+
+      }
+      },
+    {
+      "type": "package",
+      "package": {
+        "name": "matthewkeath/groups-gravity",
+        "version": "1.2.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/matthewkeath/groups-gravity/archive/master.zip"
+        }
+
+      }
+    },
+
+    {
+      "type": "package",
+      "package": {
+        "name": "matthewkeath/gravity-reg",
+        "version": "2.1",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://github.com/matthewkeath/gravity-reg/archive/master.zip"
+        }
+        
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "composer/installers": "~1.0.12",
+    "vlucas/phpdotenv": "~1.0.9",
+    "johnpbloch/wordpress": "4.1.1",
+        "wpackagist-plugin/akismet":"*",
+        "wpackagist-plugin/groups": "1.4.15",
+        "matthewkeath/gravity-platformb": "*",
+        "matthewkeath/groups-gravity": "1.2.1",
+        "matthewkeath/gravity-reg": "*",
+        "katzwebservices/GravityView": "*",
+        "wpackagist-plugin/profile-builder": "2.1.3",
+        "wpackagist-plugin/woocommerce": "2.3.7"
+    
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  }
+}
+
+

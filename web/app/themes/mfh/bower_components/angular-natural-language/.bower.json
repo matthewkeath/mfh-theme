@@ -1,0 +1,27 @@
+{
+  "name": "angular-natural-language",
+  "version": "0.1.2",
+  "main": "./build/angular-natural-language.min.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ],
+  "dependencies": {
+    "angular": "~1.0.6"
+  },
+  "devDependencies": {
+    "angular-mocks": "*",
+    "angular-scenario": "*"
+  },
+  "homepage": "https://github.com/Venturocket/angular-natural-language",
+  "_release": "0.1.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.2",
+    "commit": "522cb7b1884395e5990a9c0eeb545af9930e564e"
+  },
+  "_source": "git://github.com/Venturocket/angular-natural-language.git",
+  "_target": "~0.1.2",
+  "_originalSource": "angular-natural-language"
+}
